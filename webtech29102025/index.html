@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Database Management System</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- Database Creation Section -->
+            <div class="section">
+                <h2>Database Operations</h2>
+                <div class="form-group">
+                    <label for="dbName">Database Name:</label>
+                    <input type="text" id="dbName" placeholder="Enter database name">
+                    <button onclick="createDatabase()" class="btn btn-primary">Create Database</button>
+                </div>
+            </div>
+
+            <!-- Table Creation Section -->
+            <div class="section">
+                <h2>Table Operations</h2>
+                <div class="form-group">
+                    <label for="tableName">Table Name:</label>
+                    <input type="text" id="tableName" placeholder="Enter table name">
+                    <button onclick="createTable()" class="btn btn-secondary">Create Table</button>
+                </div>
+            </div>
+
+            <!-- Data Insertion Section -->
+            <div class="section">
+                <h2>Insert Records</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" placeholder="Enter last name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regni">Registration Number:</label>
+                        <input type="text" id="regni" placeholder="Enter registration number">
+                    </div>
+                    <div class="form-group">
+                        <label for="sec">Section:</label>
+                        <input type="text" id="sec" placeholder="Enter section">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Enter address">
+                </div>
+                <button onclick="insertRecord()" class="btn btn-success">Insert Record</button>
+            </div>
+
+            <!-- Search Section -->
+            <div class="section">
+                <h2>Search Records</h2>
+                <div class="search-container">
+                    <div class="form-group">
+                        <label for="searchId">Search by ID:</label>
+                        <input type="number" id="searchId" placeholder="Enter ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="searchFname">Search by First Name:</label>
+                        <input type="text" id="searchFname" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="searchLname">Search by Last Name:</label>
+                        <input type="text" id="searchLname" placeholder="Enter last name">
+                    </div>
+                    <button onclick="searchRecords()" class="btn btn-info">Search</button>
+                    <button onclick="clearSearch()" class="btn btn-warning">Clear</button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="section">
+                <h2>Results</h2>
+                <div id="results" class="results-container"></div>
+            </div>
+
+            <!-- Status Messages -->
+            <div id="status" class="status-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
